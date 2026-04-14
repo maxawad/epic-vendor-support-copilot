@@ -1,0 +1,138 @@
+[
+  {
+    "id": "auth_001",
+    "category": "authentication",
+    "question": "How do I reset my password?",
+    "answer": "To reset your password, contact your organization administrator. They can initiate a password reset through the Epic Vendor Services admin portal. If your admin is unavailable, contact Epic Support directly at vendorsupport@epic.com.",
+    "source_title": "Password Reset Help",
+    "source_url": "https://vendorservices.epic.com/FAQ/PasswordReset"
+  },
+  {
+    "id": "auth_002",
+    "category": "authentication",
+    "question": "I can't log in to the Vendor Services portal. What should I do?",
+    "answer": "If you're unable to log in, first verify that you're using the correct username and that Caps Lock is off. If the issue persists, your account may be locked after multiple failed attempts. Contact your organization administrator to unlock your account or reset your credentials.",
+    "source_title": "Login Troubleshooting",
+    "source_url": "https://vendorservices.epic.com/FAQ/LoginHelp"
+  },
+  {
+    "id": "auth_003",
+    "category": "authentication",
+    "question": "How do I set up multi-factor authentication (MFA)?",
+    "answer": "Multi-factor authentication is configured by your organization administrator through the admin portal. Once enabled, you will be prompted to set up MFA on your next login. Supported methods include authenticator apps (Google Authenticator, Microsoft Authenticator) and SMS verification.",
+    "source_title": "MFA Setup Guide",
+    "source_url": "https://vendorservices.epic.com/FAQ/MFASetup"
+  },
+  {
+    "id": "auth_004",
+    "category": "authentication",
+    "question": "My account is locked. How do I unlock it?",
+    "answer": "Accounts are automatically locked after 5 consecutive failed login attempts. To unlock your account, contact your organization administrator. They can unlock it from the admin portal under User Management > Account Status. The lockout automatically expires after 30 minutes.",
+    "source_title": "Account Lockout Policy",
+    "source_url": "https://vendorservices.epic.com/FAQ/AccountLockout"
+  },
+  {
+    "id": "auth_005",
+    "category": "authentication",
+    "question": "How do I change my username or email address?",
+    "answer": "Username and email changes must be requested through your organization administrator. They can update your profile in the admin portal under User Management. Note that changing your email will require re-verification of your account.",
+    "source_title": "Account Profile Updates",
+    "source_url": "https://vendorservices.epic.com/FAQ/ProfileUpdates"
+  },
+  {
+    "id": "auth_006",
+    "category": "authentication",
+    "question": "What are the password requirements for Vendor Services?",
+    "answer": "Passwords must be at least 12 characters long and include: one uppercase letter, one lowercase letter, one number, and one special character. Passwords expire every 90 days and cannot be reused within the last 10 password cycles.",
+    "source_title": "Password Policy",
+    "source_url": "https://vendorservices.epic.com/FAQ/PasswordPolicy"
+  },
+  {
+    "id": "auth_007",
+    "category": "authentication",
+    "question": "How do I log in with SSO (Single Sign-On)?",
+    "answer": "If your organization has configured SSO, click 'Sign in with SSO' on the login page and enter your organization's SSO domain. You will be redirected to your identity provider for authentication. Contact your IT department if SSO is not working.",
+    "source_title": "SSO Login Guide",
+    "source_url": "https://vendorservices.epic.com/FAQ/SSOLogin"
+  },
+  {
+    "id": "billing_001",
+    "category": "billing",
+    "question": "How do I view my invoices?",
+    "answer": "Navigate to the Billing section in the left sidebar, then click 'Invoice History.' You can filter invoices by date range, status (paid, pending, overdue), and download them as PDF. Invoices are generated monthly on the 1st of each month.",
+    "source_title": "Invoice Management",
+    "source_url": "https://vendorservices.epic.com/FAQ/Invoices"
+  },
+  {
+    "id": "billing_002",
+    "category": "billing",
+    "question": "How do I update my payment method?",
+    "answer": "Go to Billing > Payment Methods to add or update your payment information. Accepted methods include ACH bank transfer and corporate credit cards. Changes take effect on the next billing cycle. For wire transfers, contact billing@epic.com for instructions.",
+    "source_title": "Payment Methods",
+    "source_url": "https://vendorservices.epic.com/FAQ/PaymentMethods"
+  },
+  {
+    "id": "billing_003",
+    "category": "billing",
+    "question": "I was charged incorrectly. How do I dispute a charge?",
+    "answer": "To dispute a charge, go to Billing > Invoice History, find the invoice in question, and click 'Dispute.' Provide a detailed description of the discrepancy. Our billing team will review your dispute within 5 business days. You can also email billing@epic.com with the invoice number.",
+    "source_title": "Billing Disputes",
+    "source_url": "https://vendorservices.epic.com/FAQ/BillingDisputes"
+  },
+  {
+    "id": "reporting_001",
+    "category": "reporting",
+    "question": "How do I generate a usage report?",
+    "answer": "Go to Reports > Usage Reports and select the date range and report type. Available reports include API call volume, user activity, and data transfer metrics. Reports can be exported in CSV, Excel, or PDF format. Scheduled reports can be configured to run automatically.",
+    "source_title": "Usage Reports",
+    "source_url": "https://vendorservices.epic.com/FAQ/UsageReports"
+  },
+  {
+    "id": "reporting_002",
+    "category": "reporting",
+    "question": "How do I schedule automated reports?",
+    "answer": "Navigate to Reports > Scheduled Reports and click 'Create Schedule.' Select the report type, frequency (daily, weekly, monthly), recipients, and format. Scheduled reports are emailed to the specified recipients at the configured time.",
+    "source_title": "Scheduled Reports",
+    "source_url": "https://vendorservices.epic.com/FAQ/ScheduledReports"
+  },
+  {
+    "id": "reporting_003",
+    "category": "reporting",
+    "question": "What data is included in the compliance audit report?",
+    "answer": "The compliance audit report includes user access logs, permission changes, data access events, and API authentication records. This report is available under Reports > Compliance and covers the selected time period. It meets HIPAA and SOC 2 audit requirements.",
+    "source_title": "Compliance Audit Reports",
+    "source_url": "https://vendorservices.epic.com/FAQ/ComplianceReports"
+  },
+  {
+    "id": "general_001",
+    "category": "general",
+    "question": "How do I contact Epic Vendor Services support?",
+    "answer": "You can reach Epic Vendor Services support through: (1) Email at vendorsupport@epic.com, (2) Phone at 1-800-EPIC-VND (Mon-Fri, 8am-6pm CT), or (3) the in-portal support chat. For critical issues, use the emergency hotline at 1-800-EPIC-911.",
+    "source_title": "Contact Support",
+    "source_url": "https://vendorservices.epic.com/FAQ/ContactSupport"
+  },
+  {
+    "id": "general_002",
+    "category": "general",
+    "question": "What are the system requirements for using the Vendor Services portal?",
+    "answer": "The Vendor Services portal supports the latest two versions of Chrome, Firefox, Safari, and Edge. JavaScript must be enabled. A minimum screen resolution of 1280x720 is recommended. For API integrations, TLS 1.2 or higher is required.",
+    "source_title": "System Requirements",
+    "source_url": "https://vendorservices.epic.com/FAQ/SystemRequirements"
+  },
+  {
+    "id": "general_003",
+    "category": "general",
+    "question": "Is there a maintenance schedule for the portal?",
+    "answer": "Scheduled maintenance windows are every Sunday from 2:00 AM to 6:00 AM CT. Emergency maintenance may occur outside this window with 2-hour advance notice via email. Check the Status page at status.vendorservices.epic.com for real-time updates.",
+    "source_title": "Maintenance Schedule",
+    "source_url": "https://vendorservices.epic.com/FAQ/MaintenanceSchedule"
+  },
+  {
+    "id": "general_004",
+    "category": "general",
+    "question": "How do I add a new user to my organization's account?",
+    "answer": "Organization administrators can add new users under Admin > User Management > Add User. Required fields include name, email, and role assignment. The new user will receive an activation email with instructions to set up their account and password.",
+    "source_title": "User Management",
+    "source_url": "https://vendorservices.epic.com/FAQ/UserManagement"
+  }
+]

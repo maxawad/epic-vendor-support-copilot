@@ -1,0 +1,13 @@
+[Unit]
+Description=Cloudflare Tunnel for support-epic.maxawad.com
+After=network.target epic-support-api.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/cloudflared tunnel run epic-support
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

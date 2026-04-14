@@ -1,0 +1,15 @@
+[Unit]
+Description=Epic Vendor Services FAQ Support Copilot API
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/redxamapp/packages/support-epic.maxawad.com
+EnvironmentFile=/root/redxamapp/packages/support-epic.maxawad.com/.env
+ExecStart=/root/redxamapp/packages/support-epic.maxawad.com/venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
