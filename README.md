@@ -1,16 +1,20 @@
 # Epic Vendor Services FAQ Support Copilot
 
-A production-ready support chatbot that answers Epic Vendor Services-style FAQ questions using retrieval-augmented generation (RAG) with source grounding, conversational memory, and support-safe routing.
+A small support chatbot that answers vendor-portal FAQ questions. You type a question such as "How do I reset my password?", and it finds the most relevant FAQ entries, answers from them, and links the sources. Login and password problems are always sent to an administrator or support instead of inventing steps. It is a portfolio project that uses synthetic FAQ data modeled on a typical vendor services portal. It is not affiliated with Epic Systems and contains no real Epic data.
 
-**Live**: [https://support-epic.maxawad.com](https://support-epic.maxawad.com)
+**Status:** working. It runs with no API keys using a built-in template answer mode. Setting an OpenAI key (optional) switches answers to GPT-4o-mini.
+
+**Hosted instance:** [https://support-epic.maxawad.com](https://support-epic.maxawad.com) (may be offline at any time).
+
+**Try it locally:** the app is a Python server (FastAPI) that also serves the chat page, so it is not a static site. Follow the Quick Start below and open http://localhost:8000.
 
 ## Features
 
 - **FAQ Retrieval**: Keyword-scored retrieval from 17 structured FAQ entries across 4 categories
-- **Source Grounding**: Every answer cites FAQ title and URL — no hallucinations
+- **Source Grounding**: Every answer cites FAQ title and URL: no hallucinations
 - **Session Memory**: Short-term conversational memory for follow-up questions with `memory_used` indicator
 - **Long-term Memory**: Stores user-specific facts (e.g., "My admin is John") across sessions
-- **Support-Safe Routing**: Authentication issues always routed to admin/support — never generates fake steps
+- **Support-Safe Routing**: Authentication issues always routed to admin/support: never generates fake steps
 - **LLM + Fallback**: Uses OpenAI GPT-4o-mini when available, template fallback otherwise
 - **Modern Chat UI**: Clean, responsive interface with quick actions, source display, and memory badges
 
@@ -28,8 +32,9 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Set your OpenAI key (optional — works without it via fallback)
-echo "OPENAI_API_KEY=sk-your-key-here" > .env
+# Optional: copy the example file and add your own OpenAI key.
+# Without a key the app uses the template fallback.
+cp .env.example .env
 
 # Run the server
 uvicorn app.main:app --host 0.0.0.0 --port 8000
@@ -103,10 +108,10 @@ All 38 tests cover: FAQ loading/validation, keyword retrieval accuracy, auth boo
 
 ## Deployment
 
-Deployed via Cloudflare Tunnel with systemd services for auto-restart:
+The hosted instance is deployed via Cloudflare Tunnel with systemd services for auto-restart:
 
-- **API Service**: `epic-support-api.service` — runs uvicorn on port 8000
-- **Tunnel Service**: `epic-support-tunnel.service` — runs cloudflared tunnel
+- **API Service**: `epic-support-api.service`: runs uvicorn on port 8000
+- **Tunnel Service**: `epic-support-tunnel.service`: runs cloudflared tunnel
 - **Public URL**: [https://support-epic.maxawad.com](https://support-epic.maxawad.com)
 
 ## Tech Stack
@@ -116,3 +121,13 @@ Deployed via Cloudflare Tunnel with systemd services for auto-restart:
 - **Retrieval**: Keyword scoring with auth-aware boosting
 - **Memory**: In-memory session store + JSON-based long-term memory
 - **Deployment**: Cloudflare Tunnel, systemd
+
+## Notes
+
+- Conversation memory lives in the server process. Long-term facts (for example "My admin is John") are written to `memory_store.json` next to the app, which is git-ignored. Do not put real personal data into the chat on a public deployment.
+- The systemd unit files assume a specific server path and are examples only.
+- No license file is included yet, so all rights are reserved by default.
+
+## Credits
+
+Built by Max Awad with AI assistance (see `AI_USAGE.md`). The FAQ content is synthetic.

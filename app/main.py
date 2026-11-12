@@ -43,7 +43,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -51,7 +51,7 @@ app.add_middleware(
 
 class ChatRequest(BaseModel):
     message: str = Field(..., min_length=1, max_length=2000)
-    session_id: Optional[str] = None
+    session_id: Optional[str] = Field(default=None, max_length=100)
 
 
 class SourceInfo(BaseModel):
