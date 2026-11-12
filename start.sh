@@ -5,7 +5,9 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$DIR"
 
 if [ -f .env ]; then
-    export $(grep -v '^#' .env | xargs)
+    set -a
+    source .env
+    set +a
 fi
 
 if [ ! -d venv ]; then
@@ -18,6 +20,5 @@ fi
 
 echo "Starting Epic Vendor Services FAQ Support Copilot..."
 echo "Local:  http://localhost:8000"
-echo "Public: https://support-epic.maxawad.com"
 
 uvicorn app.main:app --host 0.0.0.0 --port 8000
